@@ -59,8 +59,6 @@
     </bean>
 
 
-
-
     <!--（2）配置SqlSessionFactoryBean 来自mybatis-spring-->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <!--数据源-->

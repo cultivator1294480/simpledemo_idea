@@ -26,8 +26,8 @@
       <file leaf-file-name="DynamicDataSource.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/demo/datasource/DynamicDataSource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" column="33" lean-forward="false" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="33" />
+            <state relative-caret-position="283">
+              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -38,15 +38,15 @@
       <file leaf-file-name="spring-dao-config.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-dao-config.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="52" column="11" lean-forward="true" selection-start-line="52" selection-start-column="11" selection-end-line="52" selection-end-column="11" />
+            <state relative-caret-position="167">
+              <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
               <folding>
-                <marker date="1497919730257" expanded="false" signature="1085:1099" ph="com.mysql.jdbc.Driver" />
-                <marker date="1497919730257" expanded="false" signature="1150:1161" ph="jdbc:mysql://localhost:3306/testmysql?useUnicode=true&amp;characterEncoding=UTF-8" />
-                <marker date="1497919730257" expanded="false" signature="1209:1225" ph="root" />
-                <marker date="1497919730257" expanded="false" signature="1277:1293" ph="root" />
-                <marker date="1497919730257" expanded="false" signature="1442:1456" ph="30" />
-                <marker date="1497919730257" expanded="false" signature="1555:1569" ph="10" />
+                <marker date="1497920954946" expanded="false" signature="1085:1099" ph="com.mysql.jdbc.Driver" />
+                <marker date="1497920954946" expanded="false" signature="1150:1161" ph="jdbc:mysql://localhost:3306/testmysql?useUnicode=true&amp;characterEncoding=UTF-8" />
+                <marker date="1497920954946" expanded="false" signature="1209:1225" ph="root" />
+                <marker date="1497920954946" expanded="false" signature="1277:1293" ph="root" />
+                <marker date="1497920954946" expanded="false" signature="1442:1456" ph="30" />
+                <marker date="1497920954946" expanded="false" signature="1555:1569" ph="10" />
               </folding>
             </state>
           </provider>
@@ -171,11 +171,11 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/demo/dao/AreaDao.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/AreaDao.xml" />
         <option value="$PROJECT_DIR$/src/main/java/cn/demo/service/AccountServiceTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/demo/datasource/DynamicDataSource.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/spring/spring-dao-config.xml" />
         <option value="$PROJECT_DIR$/src/main/java/cn/demo/controller/Demo1Controller.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/demo1.jsp" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/demo/datasource/DynamicDataSource.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring/spring-dao-config.xml" />
       </list>
     </option>
   </component>
@@ -1417,7 +1417,7 @@
       <workItem from="1497832595039" duration="40000" />
       <workItem from="1497832687549" duration="12000" />
       <workItem from="1497832761274" duration="16005000" />
-      <workItem from="1497917302776" duration="3418000" />
+      <workItem from="1497917302776" duration="3646000" />
     </task>
     <servers />
   </component>
@@ -1454,7 +1454,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68440000" />
+    <option name="totallyTimeSpent" value="68668000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="3" y="-18" width="1351" height="744" extended-state="0" />
@@ -1911,16 +1911,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/demo/datasource/DynamicDataSource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="33" lean-forward="false" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
@@ -1929,17 +1919,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/demo/datasource/DynamicDataSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-dao-config.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="52" column="11" lean-forward="true" selection-start-line="52" selection-start-column="11" selection-end-line="52" selection-end-column="11" />
+        <state relative-caret-position="167">
+          <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
           <folding>
-            <marker date="1497919730257" expanded="false" signature="1085:1099" ph="com.mysql.jdbc.Driver" />
-            <marker date="1497919730257" expanded="false" signature="1150:1161" ph="jdbc:mysql://localhost:3306/testmysql?useUnicode=true&amp;characterEncoding=UTF-8" />
-            <marker date="1497919730257" expanded="false" signature="1209:1225" ph="root" />
-            <marker date="1497919730257" expanded="false" signature="1277:1293" ph="root" />
-            <marker date="1497919730257" expanded="false" signature="1442:1456" ph="30" />
-            <marker date="1497919730257" expanded="false" signature="1555:1569" ph="10" />
+            <marker date="1497920954946" expanded="false" signature="1085:1099" ph="com.mysql.jdbc.Driver" />
+            <marker date="1497920954946" expanded="false" signature="1150:1161" ph="jdbc:mysql://localhost:3306/testmysql?useUnicode=true&amp;characterEncoding=UTF-8" />
+            <marker date="1497920954946" expanded="false" signature="1209:1225" ph="root" />
+            <marker date="1497920954946" expanded="false" signature="1277:1293" ph="root" />
+            <marker date="1497920954946" expanded="false" signature="1442:1456" ph="30" />
+            <marker date="1497920954946" expanded="false" signature="1555:1569" ph="10" />
           </folding>
         </state>
       </provider>
