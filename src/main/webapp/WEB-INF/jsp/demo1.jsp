@@ -22,11 +22,19 @@
 sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
 <h1>1111</h1>
 <h2>accountservice:${accountList}</h2>
+<h2>accountservice:${accountList2}</h2>
 <div>
             fffffffffffffffffffffffffffffffffffffffffffffffff
     <c:forEach items="${accountList}" var="account" varStatus="status">
         ${account.name}
     </c:forEach>
+
+
+    <c:forEach items="${accountList2}" var="account" varStatus="status">
+        ${account.name}
+    </c:forEach>
+
+
 
     <a href="demo2">demo2</a>
 

@@ -22,34 +22,24 @@
 sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
 <h1>1111</h1>
 <h2>accountservice:${accountList}</h2>
+<h2>accountservice:${accountList2}</h2>
 <div>
             fffffffffffffffffffffffffffffffffffffffffffffffff
     <c:forEach items="${accountList}" var="account" varStatus="status">
         ${account.name}
     </c:forEach>
 
+
+    <c:forEach items="${accountList2}" var="account" varStatus="status">
+        ${account.name}
+    </c:forEach>
+
+
+
     <a href="demo2">demo2</a>
 
 </div>
-<script type="application/javascript">
 
-    //代码示例3
-    //注意还是那个Add，精髓也在这里，随后说到
-    function Add(a, b){
-        return a+b;
-    }
-    //LazyAdd改变了，多了一个参数cb
-    function LazyAdd(a, cb){
-        return function(b){
-            cb(a, b);
-        }
-    }
-    //将Add传给形参cb
-    var result = LazyAdd(1, Add)
-    // doing something else
-    result = result(2); // => 3
-    console.log(result);
-</script>
 
 </body>
 </html>

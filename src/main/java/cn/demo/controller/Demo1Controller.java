@@ -1,5 +1,7 @@
 package cn.demo.controller;
 
+import cn.demo.datasource.DataSourceContextHolder;
+import cn.demo.datasource.DataSourceType;
 import cn.demo.model.Account;
 import cn.demo.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,11 +33,17 @@ public class Demo1Controller {
      */
     @RequestMapping(value = "/simple-demo/demo",method = RequestMethod.GET)
     public String demo1View(Model model){
+
+        //切换数据库
+        DataSourceContextHolder.setDbType(DataSourceType.DS_TEST);
         List<Account> accountList= accountService.getAllAccount();
-        for (Account account:accountList) {
-            System.out.println(account.toString()+"=======================================================================================================");
-        }
         model.addAttribute("accountList",accountList);
+
+        //切换数据库
+        DataSourceContextHolder.setDbType(DataSourceType.DS_TESTMYSQL);
+        List<Account> accountList2= accountService.getAllAccount();
+        model.addAttribute("accountList2",accountList2);
+
         return "demo1";
     }
 

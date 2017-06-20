@@ -14,23 +14,53 @@
     <!--加载数据库连接配置-->
     <context:property-placeholder location="classpath:jdbc.properties"/>
     <!--c3po最重要的api-->
-    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
-        <property name="driverClass" value="${jdbc.driver}"/>
-        <property name="jdbcUrl" value="${jdbc.url}"/>
-        <property name="user" value="${jdbc.username}"/>
-        <property name="password" value="${jdbc.password}"/>
-        <!--c3po连接处私有属性-->
-        <!--最大连接数-->
-        <property name="maxPoolSize" value="${maxPoolSize}"/>
-        <!--最小连接数-->
-        <property name="minPoolSize" value="${minPoolSize}"/>
-        <!--关闭连接后不自动commint-->
-        <property name="autoCommitOnClose" value="false"/>
-        <!--表示当连接数到达最大时，超时时间-->
-        <property name="checkoutTimeout" value="1000"/>
-        <!--重试次数-->
-        <property name="acquireRetryAttempts" value="2"/>
+    <!--<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">-->
+        <!--<property name="driverClass" value="${jdbc.driver}"/>-->
+        <!--<property name="jdbcUrl" value="${jdbc.url}"/>-->
+        <!--<property name="user" value="${jdbc.username}"/>-->
+        <!--<property name="password" value="${jdbc.password}"/>-->
+        <!--&lt;!&ndash;c3po连接处私有属性&ndash;&gt;-->
+        <!--&lt;!&ndash;最大连接数&ndash;&gt;-->
+        <!--<property name="maxPoolSize" value="${maxPoolSize}"/>-->
+        <!--&lt;!&ndash;最小连接数&ndash;&gt;-->
+        <!--<property name="minPoolSize" value="${minPoolSize}"/>-->
+        <!--&lt;!&ndash;关闭连接后不自动commint&ndash;&gt;-->
+        <!--<property name="autoCommitOnClose" value="false"/>-->
+        <!--&lt;!&ndash;表示当连接数到达最大时，超时时间&ndash;&gt;-->
+        <!--<property name="checkoutTimeout" value="1000"/>-->
+        <!--&lt;!&ndash;重试次数&ndash;&gt;-->
+        <!--<property name="acquireRetryAttempts" value="2"/>-->
+    <!--</bean>-->
+
+    <!-- 动态配置数据源 -->
+    <bean id="dataSource" class="cn.demo.datasource.DynamicDataSource">
+        <property name="targetDataSources">
+            <map key-type="java.lang.String">
+                <entry value-ref="ds_testmysql" key="ds_testmysql"></entry>
+                <entry value-ref="ds_test" key="ds_test"></entry>
+                <!--<entry value-ref="ds_mop" key="ds_mop"></entry>-->
+            </map>
+        </property>
+        <property name="defaultTargetDataSource" ref="ds_testmysql"></property>      <!-- 默认使用ds1的数据源 -->
     </bean>
+
+    <!-- 多数据源配置 -->
+    <bean id="ds_testmysql" class="org.apache.commons.dbcp.BasicDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
+        <property name="url" value="jdbc:mysql://localhost:3306/testmysql"></property>
+        <property name="username" value="root"></property>
+        <property name="password" value="root"></property>
+    </bean>
+    <bean id="ds_test" class="org.apache.commons.dbcp.BasicDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
+        <property name="url" value="jdbc:mysql://localhost:3306/test"></property>
+        <property name="username" value="root"></property>
+        <property name="password" value="root"></property>
+    </bean>
+
+
+
+
     <!--（2）配置SqlSessionFactoryBean 来自mybatis-spring-->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <!--数据源-->

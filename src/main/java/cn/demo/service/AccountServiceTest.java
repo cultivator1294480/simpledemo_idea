@@ -52,11 +52,6 @@ public class AccountServiceTest {
     public void testGetAllArea() {
        List<Area> areas = areaDao.getAllArea();
         System.out.print(areas.toString());
-//        for (Area area:areas) {
-//            System.out.print(area.toString());
-//        }
-
-
     }
 
 
